@@ -4,15 +4,15 @@ defmodule LanguageList do
   end
 
   def add(list, language) do
-    [list | language]
+    [language | list]
   end
 
-  def remove([_ | tail]) do
-    tail
+  def remove(list) do
+    tl(list)
   end
 
-  def first([head | _]) do
-    head
+  def first(list) do
+    hd(list)
   end
 
   def count(list) do
@@ -23,3 +23,4 @@ defmodule LanguageList do
     "Elixir" in list
   end
 end
+
